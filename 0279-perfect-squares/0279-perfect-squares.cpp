@@ -11,13 +11,13 @@ public:
             int min = INT_MAX;
             for(int j=1;j*j<=i;j++)
             {
-                int rem = i -j *j;//3 -1 *1
-                if(dp[rem] < min)
+                int rem = i - j * j;
+                if(dp[rem] < min) 
                 {
                     min = dp[rem];
                 }
             }
-            dp[i] = min+1;
+            dp[i] = min + 1;
         }
         return dp[n];
     }
